@@ -11,6 +11,7 @@ import "./App.scss";
 // pages
 const SignUp = asyncComponent(() => import("./pages/SignUp"));
 const Home = asyncComponent(() => import("./pages/Home"));
+const Information = asyncComponent(() => import("./pages/Information"));
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Switch>
         <Route exact path={ROUTES.ROOT} component={Home} />
         <Route path={ROUTES.SIGNUP} component={SignUp} />
+        <Route path={ROUTES.INFORMATION} component={Information} />
       </Switch>
     </BrowserRouter>
   );
