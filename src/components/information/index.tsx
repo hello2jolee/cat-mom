@@ -6,11 +6,14 @@ import BasicInformation from "./BasicInformation";
 import Comment from "./Comment";
 
 const Information = observer((data) => {
+  const myDataList = data[0];
+  // const myCommentList = data[0].comments;
+  console.log(myDataList)
   return (
     <>
       <ImageCarousel />
-      <BasicInformation />
-      <Comment />
+      <BasicInformation {...myDataList} />
+      <Comment {...myDataList} />
     </>
   );
 });
