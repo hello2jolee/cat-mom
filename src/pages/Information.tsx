@@ -1,29 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
 
 import Information from "../components/information/index";
 
 const InformationPage = observer(() => {
-  let myData = [];
-
-  const requestURL =
-    "https://raw.githubusercontent.com/hello2jolee/cat-mom/feature/3-information_page/src/data.json";
-  const request = new XMLHttpRequest();
-  request.open("GET", requestURL);
-
-  request.responseType = "json";
-  request.send();
-
-  request.onload = async () => {
-    const tempData = await request.response;
-    await onLoad(tempData);
+  // https://www.pluralsight.com/guides/fetch-data-from-a-json-file-in-a-react-app
+  const [data, setData] = useState([]);
+  const getData = () => {
+    fetch("data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then(function (response) {
+        console.log(response);
+        return response.json();
+      })
+      .then(function (myJson) {
+        console.log(myJson);
+        setData(myJson);
+      });
   };
 
-  const onLoad = async (tempData) => {
-    myData = await tempData;
-  };
+  useEffect(() => {
+    getData();
+  }, []);
 
-  return <Information {...myData} />;
+  return <Information {...data} />;
 });
 
 export default InformationPage;

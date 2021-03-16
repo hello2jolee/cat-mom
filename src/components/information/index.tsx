@@ -5,7 +5,7 @@ import ImageCarousel from "./ImageCarousel";
 import BasicInformation from "./BasicInformation";
 import Comment from "./Comment";
 
-const Information = observer((infoList) => {
+const Information = observer((data) => {
   return (
     <>
       <ImageCarousel />
