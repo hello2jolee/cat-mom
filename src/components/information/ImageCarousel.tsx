@@ -3,10 +3,12 @@ import { observer } from "mobx-react-lite";
 
 import "./BasicInformation.css";
 
-const BasicInformation = observer(({}) => {
+const ImageCarousel = observer(({}) => {
   return (
-      <div>BASIC INFORMATION</div>
-  )
+    <ul>
+      <li>IMG DUMMY</li>
+    </ul>
+  );
 });
 
-export default BasicInformation;
+export default ImageCarousel;

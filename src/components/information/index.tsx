@@ -1,12 +1,18 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 
-import BasicInformation from './BasicInformation'
+import ImageCarousel from "./ImageCarousel";
+import BasicInformation from "./BasicInformation";
+import Comment from "./Comment";
 
-const Information = observer(() => {
-    return (
-        <BasicInformation />
-    )
-})
+const Information = observer((infoList) => {
+  return (
+    <>
+      <ImageCarousel />
+      <BasicInformation />
+      <Comment />
+    </>
+  );
+});
 
-export default Information
+export default Information;
