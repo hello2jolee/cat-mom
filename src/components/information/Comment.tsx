@@ -1,28 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { observer } from "mobx-react-lite";
+
+import Form from "./comment/Form";
+import Items from "./comment/Items";
 
 import "./BasicInformation.css";
 
-const Comment = observer((myDataList) => {
-  const listData = myDataList["comments"];
-  console.log(listData);
+export interface MyComment {
+  key: number;
+  text: string;
+}
+
+let itemKey = 0;
+
+const Comment = observer(() => {
+  // const listData = myDataList["comments"];
+  // const listData = myDataList["comments"];
+  // console.log(listData);
+
+  const [newCommentText, setNewCommentText] = useState<string>("");
+  const [comments, setComments] = useState<MyComment[]>([]);
+
+  const insertNewComment = (newTodo: MyComment) => {
+    setComments([...comments, newTodo]);
+  };
+
+  const removeComment = (key: number) => {
+    const newTodos = comments.filter((comment) => comment.key !== key);
+    setComments(newTodos);
+  };
+
   return (
-    <div>
-      <div>
-        <input type="text" />
-        <button type="submit">등록</button>
-      </div>
-      <ul>
-        {/* <li>테스트</li>
-        <li>테스트</li> */}
-        {/* {listData.map((data, index) => {
-          `<li value=${index}>
-            <img src=${data.img} width={20} height={20} />
-            <p>${data.text}</p>
-          </li>`;
-        })} */}
-      </ul>
-    </div>
+    <>
+      <Form
+        newCommentText={newCommentText}
+        setNewCommentText={setNewCommentText}
+        insertNewComment={insertNewComment}
+      />
+      <Items comments={comments} removeComment={removeComment} />
+    </>
   );
 });
 
