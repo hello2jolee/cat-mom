@@ -1,65 +1,78 @@
 [
   {
-    "id": 12345,
-    "logitude": "37.5259579",
-    "latitude": "126.9262717",
-    "information": [
+    "qrcode" : 123456789,
+    "cat_data" : [
       {
-        "manager_id": "haha",
-        "frequency": [
-          {
-            "200310": true,
-            "200311": false,
-            "200312": true,
-            "200313": true,
-            "200314": false,
-            "200315": true
-          }
-        ]
+        "name" : "노랑이",
+        "gender" : "F",
+        "neutralization" : false,
+        "img" : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMDJfMTE0%2FMDAxNjEyMjQ1NzE4NjYz.beqnjrgxx3X25yp_6-D8EvTZKiOEkZu9MIp8U0fZvXcg.5zGqUKqY3M1JGIEGiMlFahWqF76Th1LFWf4_Cqe6Ew8g.JPEG.lemaco%2F2009053020091020-04.jpg&type=sc960_832"
       }
     ],
-    "comments": [
+    "manager" : [
       {
-        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMDJfMTE0%2FMDAxNjEyMjQ1NzE4NjYz.beqnjrgxx3X25yp_6-D8EvTZKiOEkZu9MIp8U0fZvXcg.5zGqUKqY3M1JGIEGiMlFahWqF76Th1LFWf4_Cqe6Ew8g.JPEG.lemaco%2F2009053020091020-04.jpg&type=sc960_832",
-        "text": "오늘은 노랑이를 봤어"
+        "id" : "치즈맘",
+        "rep" : true
       },
       {
-        "img": "",
-        "text": "오늘은 파랑이를 봤어"
+        "id" : "잠실토박이",
+        "rep" : false
       },
       {
-        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMTJfMjMw%2FMDAxNjEwNDQwMjAwMjA2.ZyCkOhAWt9hx_01RF_hJGp5o96pejanoNZNZyMtMCmIg.TG1FHEHSp9xwNAsbWN81mwGlZW6ZhmaTsQoLvRJDFfsg.JPEG.sihookiss%2F2843E52C-2505-4468-B929-7406A46DC2F9.jpg&type=sc960_832",
-        "text": "오늘은 초록이를 봤어"
+        "id" : "잠실주민",
+        "rep" : false
+      }
+    ],
+    "status" : [
+      {
+        "date" : "2021-03-01 10:23:00",
+        "manager" : "치즈맘",
+        "img" : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMDJfMTE0%2FMDAxNjEyMjQ1NzE4NjYz.beqnjrgxx3X25yp_6-D8EvTZKiOEkZu9MIp8U0fZvXcg.5zGqUKqY3M1JGIEGiMlFahWqF76Th1LFWf4_Cqe6Ew8g.JPEG.lemaco%2F2009053020091020-04.jpg&type=sc960_832"
       },
       {
-        "img": "",
-        "text": "오늘은 점박이를 봤어"
+        "date" : "2021-03-02 11:40:23",
+        "manager" : "치즈맘",
+        "img" : ""
       },
       {
-        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMzFfMjk4%2FMDAxNjEyMDkxNjgzMzI5.3sJlWvMEwz8OFYLp0Vhk2uBdLMhk_eFX_XwtjXYNUxgg.p6yZYwl-e-h2ahuGoDaMXeS_RB85FyqcxCAZxOwjKFUg.JPEG.wilddog33%2F0041.jpg&type=sc960_832",
-        "text": "오늘은 빨강이를 봤어"
+        "date" : "2021-03-03 10:30:00",
+        "manager" : "잠실토박이",
+        "img" : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMDJfMTE0%2FMDAxNjEyMjQ1NzE4NjYz.beqnjrgxx3X25yp_6-D8EvTZKiOEkZu9MIp8U0fZvXcg.5zGqUKqY3M1JGIEGiMlFahWqF76Th1LFWf4_Cqe6Ew8g.JPEG.lemaco%2F2009053020091020-04.jpg&type=sc960_832"
       }
     ]
   },
   {
-    "id": 99999,
-    "logitude": "37.5126013",
-    "latitude": "127.1003504",
-    "information": [
+    "qrcode" : 123456780,
+    "cat_data" : [
       {
-        "manager_id": "jsp111",
-        "frequency": [
-          {
-            "200310": true,
-            "200311": true,
-            "200312": true,
-            "200313": true,
-            "200314": true,
-            "200315": true
-          }
-        ]
+        "name" : "하양이",
+        "gender" : "M",
+        "neutralization" : true,
+        "img" : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMTJfMjMw%2FMDAxNjEwNDQwMjAwMjA2.ZyCkOhAWt9hx_01RF_hJGp5o96pejanoNZNZyMtMCmIg.TG1FHEHSp9xwNAsbWN81mwGlZW6ZhmaTsQoLvRJDFfsg.JPEG.sihookiss%2F2843E52C-2505-4468-B929-7406A46DC2F9.jpg&type=sc960_832"
       }
     ],
-    "comments": []
+    "manager" : [
+      {
+        "id" : "잠실나와바리",
+        "rep" : true
+      }
+    ],
+    "status" : [
+      {
+        "date" : "2021-03-01 16:00:00",
+        "manager" : "잠실나와바리",
+        "img" : ""
+      },
+      {
+        "date" : "2021-03-02 17:40:23",
+        "manager" : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMTJfMjMw%2FMDAxNjEwNDQwMjAwMjA2.ZyCkOhAWt9hx_01RF_hJGp5o96pejanoNZNZyMtMCmIg.TG1FHEHSp9xwNAsbWN81mwGlZW6ZhmaTsQoLvRJDFfsg.JPEG.sihookiss%2F2843E52C-2505-4468-B929-7406A46DC2F9.jpg&type=sc960_832",
+        "img" : ""
+      },
+      {
+        "date" : "2021-03-03 08:30:00",
+        "manager" : "잠실나와바리",
+        "img" : "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMTJfMjMw%2FMDAxNjEwNDQwMjAwMjA2.ZyCkOhAWt9hx_01RF_hJGp5o96pejanoNZNZyMtMCmIg.TG1FHEHSp9xwNAsbWN81mwGlZW6ZhmaTsQoLvRJDFfsg.JPEG.sihookiss%2F2843E52C-2505-4468-B929-7406A46DC2F9.jpg&type=sc960_832"
+      }
+    ]
   }
 ]
