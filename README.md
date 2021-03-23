@@ -31,3 +31,9 @@
         └── store // redux 작업을 위한 폴더, 내부에 actions, reducers 폴더 존재
 
 ```
+
+## 저장소 실행 방법
+```
+npm start 
+json-server --watch ./src/db/data.json --port 3001
+```
