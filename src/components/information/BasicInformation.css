@@ -1,0 +1,17 @@
+@import "../../css/common.css";
+
+.information-list {
+  margin-top: 10px;
+}
+.information-list .item {
+  margin-top: 5px;
+}
+.information-list .item:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.information-list .item dt {
+  float: left;
+  width: 100px;
+}

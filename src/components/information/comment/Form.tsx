@@ -28,6 +28,7 @@ function Form({ newCommentText, setNewCommentText, insertNewComment }: FormProps
       <input
         value={newCommentText}
         onChange={handleChangeFormInput}
+        placeholder="날짜, 배식 담당자 순으로 입력해주세요"
         onKeyPress={(e) => {
           e.key === 'Enter' && handleCreate();
         }}
