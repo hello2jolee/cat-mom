@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import "./Information.css";
+import firebase from "../../firebase";
+
+const COLLECTION = "informations";
+const DOCUMENTID = "qrcode_";
 
 const Information = (props) => {
     const qrcode = props.qrcode;
     let lat=1, lon=1;
-    const [catName, setCanName] = useState('');
+    const [catName, setCatName] = useState('');
     const [manager, setManager] = useState('');
     const date = new Date();
     const [selectedDate, setSelectedDate] = useState(`${date.getFullYear()}-${date.getMonth()+1 <10 ? `0${date.getMonth()+1}` : date.getMonth()+1}-${date.getDate() < 10 ? `0${date.getDate()}` : date.getDate()}`);
-    const onChangeCatName = e => setCanName(e.target.value);
-    const onChangeManager = e => setManager(e.target.value);
-    const onChangeDate = e => setSelectedDate(e.target.value);
+    const onChangeCatName = (e) => setCatName(e.target.value);
+    const onChangeManager = (e) => setManager(e.target.value);
+    const onChangeDate = (e) => setSelectedDate(e.target.value);
     
     useEffect(()=> {
         askLocation();
@@ -22,24 +26,38 @@ const Information = (props) => {
         if(window.navigator.geolocation){
             window.navigator.geolocation.getCurrentPosition(setLocation);
         } else {
-          alert("Geolocation is not supported by this browser.");
+          console.log("Geolocation is not supported by this browser.");
         } 
     }
 
     const setLocation=(position)=> {
         lon = position.coords.longitude;
         lat = position.coords.latitude;
-        alert(lon+","+lat);
     }
 
     //넘기기 전에 데이터 확인 
-    const handleSubmit = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault();
-        alert(
-            `lat: ${lat} lon: ${lon} catName: ${catName} manager: ${manager} date: ${selectedDate}`
-        )
+        const catData = {name: catName, gender: "F", neutralization: false, img: null};
+        const managers = new Array({id: manager, rep: true});
+        const docId = DOCUMENTID + qrcode;
+        const location = {lat, lon};
+        // firebase에 데이터 추가하기
+        firebase.collection(COLLECTION).doc(docId).set({
+            qrcode,
+            date: selectedDate,
+            catData,
+            location,
+            managers,
+            status: null,
+        })
+        .then(() => {
+            console.log("Document successfully written!");
+        })
+        .catch((error) => {
+            console.error("Error writing document: ", error);
+        });
     }
-
 
     // 배식가능 날짜 - 추후 개발
     // const onClickCheckBox = e => {
@@ -50,7 +68,6 @@ const Information = (props) => {
     //     //     alert(checkbox);
     //     // })
     // }
-
 
     return (
         <div>  
@@ -66,7 +83,7 @@ const Information = (props) => {
                 
                 <div>
                     <label htmlFor="catName">고양이 이름</label>
-                    <input id="catName" type="text" value={catName} onChange={onChangeCatName}/>
+                    <input id="catName" type="text" value={catName} onChange={onChangeCatName} maxLength={120}/>
                     <input type="file" name="file" id=""/>
                 </div>
          
@@ -90,7 +107,7 @@ const Information = (props) => {
                     <input type="checkbox" name="AvaiableDate" id="sun" value="일"/><label htmlFor="sun">일</label>
                     <input type="checkbox" name="AvaiableDate" id="none" value="none"/><label htmlFor="none">미정</label>
                 </div>
-                <input type="submit" value="등록하기" onClick={handleSubmit}/>
+                <input type="submit" value="등록하기" onClick={onSubmit}/>
             </form>
         </div>
     );

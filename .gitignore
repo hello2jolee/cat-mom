@@ -4,4 +4,7 @@
 # IDE
 .vscode/
 
+# api key
+.env
+
 package-lock.json
