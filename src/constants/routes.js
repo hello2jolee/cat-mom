@@ -1,7 +1,8 @@
 const ROUTES = {
   ROOT: "/",
   SIGNUP: "/signup",
-  INFORMATION: "/information/:qrcode"
+  INFORMATION: "/information/:qrcode",
+  QRCODE: "/new",
 };
 
 export default ROUTES;
