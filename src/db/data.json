@@ -1,0 +1,80 @@
+{
+  "userInfo": [
+    {
+      "qrcode": 123456789,
+      "catData": [
+        {
+          "name": "노랑이",
+          "gender": "F",
+          "neutralization": false,
+          "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMDJfMTE0%2FMDAxNjEyMjQ1NzE4NjYz.beqnjrgxx3X25yp_6-D8EvTZKiOEkZu9MIp8U0fZvXcg.5zGqUKqY3M1JGIEGiMlFahWqF76Th1LFWf4_Cqe6Ew8g.JPEG.lemaco%2F2009053020091020-04.jpg&type=sc960_832"
+        }
+      ],
+      "manager": [
+        {
+          "id": "치즈맘",
+          "rep": true
+        },
+        {
+          "id": "잠실토박이",
+          "rep": false
+        },
+        {
+          "id": "잠실주민",
+          "rep": false
+        }
+      ],
+      "status": [
+        {
+          "date": "2021-03-01 10:23:00",
+          "manager": "치즈맘",
+          "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMDJfMTE0%2FMDAxNjEyMjQ1NzE4NjYz.beqnjrgxx3X25yp_6-D8EvTZKiOEkZu9MIp8U0fZvXcg.5zGqUKqY3M1JGIEGiMlFahWqF76Th1LFWf4_Cqe6Ew8g.JPEG.lemaco%2F2009053020091020-04.jpg&type=sc960_832"
+        },
+        {
+          "date": "2021-03-02 11:40:23",
+          "manager": "치즈맘",
+          "img": ""
+        },
+        {
+          "date": "2021-03-03 10:30:00",
+          "manager": "잠실토박이",
+          "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMDJfMTE0%2FMDAxNjEyMjQ1NzE4NjYz.beqnjrgxx3X25yp_6-D8EvTZKiOEkZu9MIp8U0fZvXcg.5zGqUKqY3M1JGIEGiMlFahWqF76Th1LFWf4_Cqe6Ew8g.JPEG.lemaco%2F2009053020091020-04.jpg&type=sc960_832"
+        }
+      ]
+    },
+    {
+      "qrcode": 123456780,
+      "cat_data": [
+        {
+          "name": "하양이",
+          "gender": "M",
+          "neutralization": true,
+          "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMTJfMjMw%2FMDAxNjEwNDQwMjAwMjA2.ZyCkOhAWt9hx_01RF_hJGp5o96pejanoNZNZyMtMCmIg.TG1FHEHSp9xwNAsbWN81mwGlZW6ZhmaTsQoLvRJDFfsg.JPEG.sihookiss%2F2843E52C-2505-4468-B929-7406A46DC2F9.jpg&type=sc960_832"
+        }
+      ],
+      "manager": [
+        {
+          "id": "잠실나와바리",
+          "rep": true
+        }
+      ],
+      "status": [
+        {
+          "date": "2021-03-01 16:00:00",
+          "manager": "잠실나와바리",
+          "img": ""
+        },
+        {
+          "date": "2021-03-02 17:40:23",
+          "manager": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMTJfMjMw%2FMDAxNjEwNDQwMjAwMjA2.ZyCkOhAWt9hx_01RF_hJGp5o96pejanoNZNZyMtMCmIg.TG1FHEHSp9xwNAsbWN81mwGlZW6ZhmaTsQoLvRJDFfsg.JPEG.sihookiss%2F2843E52C-2505-4468-B929-7406A46DC2F9.jpg&type=sc960_832",
+          "img": ""
+        },
+        {
+          "date": "2021-03-03 08:30:00",
+          "manager": "잠실나와바리",
+          "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMTJfMjMw%2FMDAxNjEwNDQwMjAwMjA2.ZyCkOhAWt9hx_01RF_hJGp5o96pejanoNZNZyMtMCmIg.TG1FHEHSp9xwNAsbWN81mwGlZW6ZhmaTsQoLvRJDFfsg.JPEG.sihookiss%2F2843E52C-2505-4468-B929-7406A46DC2F9.jpg&type=sc960_832"
+        }
+      ]
+    }
+  ]
+}
