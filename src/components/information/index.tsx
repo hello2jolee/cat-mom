@@ -60,7 +60,7 @@ const Information = observer(() => {
   ];
   return (
     <>
-      <BasicInformation catData={catData} />
+      <BasicInformation />
       <FeedStatus catData={catData} />
       <Comment />
     </>

@@ -1,31 +1,12 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { observer } from "mobx-react-lite";
+import { useEffect, useState } from "react";
 
-// import firebase from 'firebase'
-import firebase, { dbService } from "../../firebase";
+import { dbService } from "../../firebase";
 
 import "./BasicInformation.css";
-import { defineBoundAction } from "mobx/lib/internal";
 
 const COLLECTION = "informations";
 
-// https://www.youtube.com/watch?v=yyo_TcZCrS4
-
-// interface Props {
-//   catData: CatData;
-// }
-
-// export interface CatData {
-//   qrcode: number;
-//   catData: [];
-//   manager: [];
-//   status: [];
-// }
-
-const BasicInformation = ({ catData: data }) => {
-  const catInformation = data[0].catData[0];
-  const managerList = data[0].manager;
-
+const BasicInformation = () => {
   const [catData, setCatData] = useState([] as any);
 
   const getDatas = async () => {
@@ -74,8 +55,8 @@ const BasicInformation = ({ catData: data }) => {
           </div>
           <div className="item">
             <dt>담당자 명단</dt>
-            {data.managers.map((m) => (
-              <dd>
+            {data.managers.map((m, i) => (
+              <dd key={i}>
                 {m.id} / {m.rep === true ? "대표!!" : ""}
               </dd>
             ))}
