@@ -7,10 +7,6 @@ import FeedStatus from "./FeedStatus";
 import useFetch from "../../hooks/useFetch";
 
 const Information = observer(() => {
-  // const { qrcode } = useParams<{ qrcode: string }>();
-  // const catData: CatData[] = useFetch(
-  //   `http://localhost:3001/userInfo?qrcode=${qrcode}`
-  // );
   const catData = [
     {
       qrcode: 123456789,
