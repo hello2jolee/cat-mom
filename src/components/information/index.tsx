@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 
+import Header from "../commons/Header";
 import BasicInformation from "./BasicInformation";
 import Comment from "./Comment";
 import FeedStatus from "./FeedStatus";
@@ -60,6 +61,7 @@ const Information = observer(() => {
   ];
   return (
     <>
+      <Header />
       <BasicInformation />
       <FeedStatus catData={catData} />
       <Comment />
