@@ -1,0 +1,58 @@
+.article {
+    padding: 10px 20px;
+    line-height: 30px;
+    background-color: #f6f6f6;
+}
+.article svg {
+    vertical-align: top;
+}
+.article button {
+    border: none;
+    line-height: inherit;
+    background-color: inherit;
+    cursor: pointer;
+}
+.article .inner {
+    display: flex;
+}
+.article .left-items {
+    flex: 1 1 auto;
+}
+.article .home {
+    display: inline-block;
+}
+.link,
+.button {
+    display: inline-block;
+    padding: 0 5px;
+    font-weight: 600;
+    color: #000;
+    vertical-align: top;
+}
+.button:hover {
+    text-decoration: underline;
+}
+.search-area {
+    display: none;
+    padding: 10px 5px;
+    line-height: 20px;
+}
+.search-area.on {
+    display: block;
+}
+.search-area .input-text {
+    flex: 1 1 auto;
+    padding: 0 5px;
+    border: none;
+}
+.search-area .search-button {
+    padding: 0 10px;
+}
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
