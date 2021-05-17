@@ -27,8 +27,8 @@ const BasicInformation = () => {
   console.log(catData);
 
   return (
-    <section>
-      <h2>기본 정보</h2>
+    <section className="article">
+      <h2 className="title">기본 정보</h2>
       {catData.map((data, index) => (
         <dl className="information-list" key={index}>
           <div className="item">

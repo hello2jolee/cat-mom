@@ -1,17 +1,23 @@
 @import "../../css/common.css";
+@import "../../css/common_layout.css";
 
 .information-list {
   margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #000;
+  font-size: 15px;
 }
+
 .information-list .item {
-  margin-top: 5px;
+  padding: 5px 0;
 }
-.information-list .item:after {
-  display: block;
-  clear: both;
-  content: "";
-}
+
 .information-list .item dt {
   float: left;
-  width: 100px;
+  width: 150px;
+  font-weight: 600;
+}
+
+.information-list .item dd {
+  overflow: hidden;
 }

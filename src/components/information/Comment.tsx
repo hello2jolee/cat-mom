@@ -14,10 +14,6 @@ export interface MyComment {
 let itemKey = 0;
 
 const Comment = observer(() => {
-  // const listData = myDataList["comments"];
-  // const listData = myDataList["comments"];
-  // console.log(listData);
-
   const [newCommentText, setNewCommentText] = useState<string>("");
   const [comments, setComments] = useState<MyComment[]>([]);
 
@@ -31,14 +27,15 @@ const Comment = observer(() => {
   };
 
   return (
-    <>
+    <section className="article">
+      <h2 className="title">배식여부 입력</h2>
       <Form
         newCommentText={newCommentText}
         setNewCommentText={setNewCommentText}
         insertNewComment={insertNewComment}
       />
       <Items comments={comments} removeComment={removeComment} />
-    </>
+    </section>
   );
 });
 
