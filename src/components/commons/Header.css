@@ -1,24 +1,24 @@
-.article {
+.article-header {
     padding: 10px 20px;
     line-height: 30px;
     background-color: #f6f6f6;
 }
-.article svg {
+.article-header svg {
     vertical-align: top;
 }
-.article button {
+.article-header button {
     border: none;
     line-height: inherit;
     background-color: inherit;
     cursor: pointer;
 }
-.article .inner {
+.article-header .inner {
     display: flex;
 }
-.article .left-items {
+.article-header .left-items {
     flex: 1 1 auto;
 }
-.article .home {
+.article-header .home {
     display: inline-block;
 }
 .link,

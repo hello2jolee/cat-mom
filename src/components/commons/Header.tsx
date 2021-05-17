@@ -27,7 +27,7 @@ const Header = observer(() => {
   }
 
   return (
-    <div className="article">
+    <div className="article-header">
       <div className="inner">
         <div className="left-items">
           <h1 className="home">
