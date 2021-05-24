@@ -5,6 +5,7 @@ import Header from "../commons/Header";
 import BasicInformation from "./BasicInformation";
 import Comment from "./Comment";
 import FeedStatus from "./FeedStatus";
+import InputFeedData from "./InputFeedData";
 import useFetch from "../../hooks/useFetch";
 
 const Information = observer(() => {
@@ -60,7 +61,7 @@ const Information = observer(() => {
       <Header />
       <BasicInformation />
       <FeedStatus catData={catData} />
-      <Comment />
+      <InputFeedData />
     </>
   );
 });
