@@ -1,0 +1,42 @@
+button {
+    border: 0;
+    background-color: transparent;
+}
+
+.header-area {
+    position: relative;
+    padding-right: 20px;
+}
+.header-area .show-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.input-area {
+    padding-top: 10px;
+}
+.input-area .item {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.input-area .item > * {
+    display: table-cell;
+}
+.input-area .item .label {
+    width: 150px;
+}
+.button-area {
+    text-align: center;
+}
+.button-area button {
+    padding: 3px 10px;
+    border: 1px solid #222;
+    border-radius: 3px;
+    line-height: 18px;
+}
+.button-area button ~ button {
+    margin-left: 15px;
+}
