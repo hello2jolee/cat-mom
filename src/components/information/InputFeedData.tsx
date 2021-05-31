@@ -17,6 +17,7 @@ const InputFeedData = () => {
     inputArea: true,
   });
   const [catData, setCatData] = useState([] as any);
+  const [catFeedData, setCatFeedData] = useState([] as any);
 
   const toggleInputArea = () => {
     if (fold.inputArea) {
@@ -37,14 +38,19 @@ const InputFeedData = () => {
       };
       setCatData((prev) => [catDataObject, ...prev]);
     });
+
+    const feedDatas = await dbService.collection(FEEDDATA).get();
+    feedDatas.forEach((document) => {
+      const catFeedDataObject = {
+        ...document.data(),
+      };
+      setCatFeedData((prev) => [catFeedDataObject, ...prev]);
+    });
   };
 
   useEffect(() => {
     getDatas();
   }, []);
-
-
-  // const catId = await catData[0].id;
 
   const [feedPerson, setFeedPerson] = useState("");
   const [ect, setEct] = useState("");
@@ -55,7 +61,7 @@ const InputFeedData = () => {
   const getCatId = async () => {
     const cId = await catData[0].id;
     setCatId(cId);
-  }
+  };
 
   // https://www.youtube.com/watch?v=8r1Pb6Ja90o
   const [image, setImage] = useState([] as any);
@@ -67,13 +73,13 @@ const InputFeedData = () => {
     }
   };
 
-  // console.log(image);
-
   const handleUpload = (e) => {
     e.preventDefault();
 
     // upload photo
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
+
+    let feedData = [{}];
 
     uploadTask.on(
       "stage_changed",
@@ -90,30 +96,30 @@ const InputFeedData = () => {
           .getDownloadURL()
           .then((url) => {
             setUrl(url);
+
+            feedData = [
+              ...catFeedData,
+              {
+                feedTime: image.lastModifiedDate,
+                imageUrl: url,
+                feedPerson: feedPerson,
+                ect: ect,
+              },
+            ];
+
+            firebase
+              .collection(FEEDDATA)
+              .doc("qrcode_1")
+              .set({ ...feedData })
+              .then(() => {
+                console.log("Document successfully written!");
+              })
+              .catch((error) => {
+                console.error("Error writing document: ", error);
+              });
           });
       }
     );
-
-    // upload feed information
-    const feedData = {
-      feedTime: image.lastModifiedDate,
-      imageUrl: url,
-      feedPerson: feedPerson,
-      ect: ect,
-    };
-
-    firebase
-      .collection(FEEDDATA)
-      .doc("qrcode_1")
-      .set({
-        feedData,
-      })
-      .then(() => {
-        console.log("Document successfully written!");
-      })
-      .catch((error) => {
-        console.error("Error writing document: ", error);
-      });
   };
 
   return (
@@ -159,13 +165,12 @@ const InputFeedData = () => {
                 <label htmlFor="feedPerson" className="label">
                   먹이 준 사람
                 </label>
-                <select
-                  id="feedPerson"
-                  value={feedPerson}
-                  onChange={onChangePerson}
-                >
+                <select onChange={onChangePerson}>
+                  <option value="NONE">NONE</option>
                   {data.managers.map((m, i) => (
-                    <option key={i}>{m.id}</option>
+                    <option key={i} value={m.id}>
+                      {m.id}
+                    </option>
                   ))}
                 </select>
               </div>
